@@ -37,8 +37,8 @@ class SplashActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-//        checkUpdates()
-        delayTimes()
+        checkUpdates()
+//        delayTimes()
 
     }
 
