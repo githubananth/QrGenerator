@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/_16sdp"
+        tools:context=".MainActivity">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputQrTextId"
+            style="@style/TextInputLayoutEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/TextInputLayoutEditText"
+            app:boxBackgroundColor="@color/colorTransparent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtQrTextId"
+                style="@style/EditInputText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/qr_code_text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnGenerateQrCodeId"
+            style="@style/ButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:text="@string/generate" />
+
+        <FrameLayout
+            android:id="@+id/lytQrImageId"
+            android:background="@drawable/drawable_qr_bg"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/_16sdp">
+
+            <ImageView
+                android:id="@+id/imgQRCodeId"
+                android:layout_width="@dimen/_128sdp"
+                android:layout_height="@dimen/_128sdp"
+                android:layout_gravity="center" />
+
+            <ProgressBar
+                android:id="@+id/progressCircleId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:scaleX="0.5"
+                android:scaleY="0.5"
+                android:visibility="gone" />
+        </FrameLayout>
+
+    </LinearLayout>
+</layout>
